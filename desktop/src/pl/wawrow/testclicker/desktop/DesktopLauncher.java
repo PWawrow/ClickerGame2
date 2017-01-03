@@ -7,10 +7,11 @@ import pl.wawrow.testclicker.TestClicker;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.foregroundFPS = 60;
-		config.backgroundFPS = 60;
-		config.height=720;
-		config.width=480;
+		config.title = TestClicker.GAME_NAME;
+		config.height = TestClicker.WIDTH;
+		config.width = TestClicker.HEIGHT;
+		config.resizable = false;
+
 		new LwjglApplication(new TestClicker(), config);
 	}
 }
